@@ -209,7 +209,6 @@ new Vue({
       else if (aqi > 300) // no
         aqiDogifyState = 'no';
 
-      const name = '';
       if (tempDogifyState === 'no' || aqiDogifyState === 'no') {
         return '../img/bt-no.png'
       }
