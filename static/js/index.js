@@ -179,7 +179,7 @@ new Vue({
       return 'a';
     },
     dogify: function () {
-      let temp = this.current_weather.temperature;
+      const temp = this.current_weather.temperature;
       let tempDogifyState = 'no';
       if (temp <= 19) // no
         tempDogifyState = 'no';
@@ -194,7 +194,7 @@ new Vue({
       else if (temp > 89) // no
         tempDogifyState = 'no';
 
-      let aqi = this.aqi
+      const aqi = this.aqi
       let aqiDogifyState = 'no'
       if (aqi <= 50)
         aqiDogifyState = 'yes';
@@ -209,7 +209,7 @@ new Vue({
       else if (aqi > 300) // no
         aqiDogifyState = 'no';
 
-      let name = '';
+      const name = '';
       if (tempDogifyState === 'no' || aqiDogifyState === 'no') {
         return '../img/bt-no.png'
       }
@@ -219,7 +219,7 @@ new Vue({
       return '../img/bt-yes.png'
     },
     tempClass: function () {
-      let temp = this.current_weather.temperature;
+      const temp = this.current_weather.temperature;
       if (temp === '') return 'dot';
 
       if (temp <= 19) // no
@@ -237,7 +237,7 @@ new Vue({
       else return 'dot';
     },
     aqiClass: function () {
-      let aqi = this.aqi
+      const aqi = this.aqi
       if (aqi === '') return 'dot';
       if (aqi <= 50)
         return 'dot good'; // yes
@@ -273,14 +273,14 @@ new Vue({
     resetView: function () {
       this.question = true;
     },
-    displayQuestionView: function (view) {
+    displayQuestionView: function () {
       if (this.question) {
         return 'block';
       } else {
         return 'none'
       }
     },
-    displayResultView: function (view) {
+    displayResultView: function () {
       if (this.question) {
         return 'none';
       } else {
@@ -288,16 +288,16 @@ new Vue({
       }
     },
     getData: function () {
-      var isValid = /^[0-9]{5}(?:-[0-9]{4})?$/.test(this.zip);
+      const isValid = /^[0-9]{5}(?:-[0-9]{4})?$/.test(this.zip);
       if (!isValid)
            return
-      let url = `${baseURL}/weather?zipcode=${this.zip}`
+      const url = `${baseURL}/weather?zipcode=${this.zip}`
       axios.get(url).then((response) => {
         this.current_weather = response.data.current_weather
       }).catch(error => { console.log(error); });
 
-      let quality_url = `${baseURL}/quality?zipcode=${this.zip}`
-      axios.get(quality_url).then((response) => {
+      const qualityUrl  = `${baseURL}/quality?zipcode=${this.zip}`
+      axios.get(qualityUrl).then((response) => {
         this.aqi = response.data.aqi;
         this.iaqi = response.data.iaqi;
         this.liberal_propaganda = response.data.liberal_propaganda;
