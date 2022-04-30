@@ -62,17 +62,17 @@ p {
 #bt-yes {
   margin:20px;
   padding-right:50px;
-  //background-image:url('/img/bt-yes.png');
+  /* background-image:url('/img/bt-yes.png'); */
 }
 
 #bt-maybe {
   margin:20px;
-  //background-image:url('/img/bt-maybe.png');
+  /* background-image:url('/img/bt-maybe.png'); */
 }
 
 #bt-no {
   margin:20px;
-  //background-image:url('/img/bt-no.png');
+  /* background-image:url('/img/bt-no.png'); */
 }
 
 .results {
