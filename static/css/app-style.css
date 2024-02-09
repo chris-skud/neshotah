@@ -41,7 +41,7 @@ p {
   background-color: #fff;
   border-radius: 50%;
   display: inline-block;
-  
+  margin:5px;
 }
 
 .AQI {
@@ -92,7 +92,6 @@ p {
 .comfortable {border: 7px solid #599F47;}
 .hot {border: 7px solid #ffa000;}
 .stupid-hot {border: 7px solid #f44336;}
-
 
 .propaganda-container {
   margin:10px;

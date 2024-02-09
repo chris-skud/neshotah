@@ -29,8 +29,8 @@
           <div class="text-center p-3">
               <p id="zipHelp" class="form-text">Enter your zipcode and we will find the closest weather station.</p>
               <label for="enterZip" class="">Zip Code</label>
-              <input type="text" class="" style="width:100px;" id="enterZip" v-model="zip">
-              <button type="button" class="btn btn-dark" v-on:click="getData()">Woof!</button>
+              <input type="text" style="width:100px;margin-left:5px;margin-right:5px" id="enterZip" v-model="zip">
+              <button type="button" style="margin-bottom:7px" class="btn btn-dark" v-on:click="getData()">Woof!</button>
           </div>
           
           <div><img src="img/bt-can-we-go-outside.png" width="350px">
@@ -41,7 +41,7 @@
         
 
         <div id="main-page" :style="{ display: displayResultView() }">
-          <button type="button" class="btn btn-dark" v-on:click="resetView()">Change Location</button><current_location></current_location>
+          <button type="button" style="margin-right:7px" class="btn btn-dark" v-on:click="resetView()">Change Location</button><current_location></current_location>
          
           <div>
             <div class="propaganda-container">
