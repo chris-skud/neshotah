@@ -50,5 +50,3 @@ class GetAirQuality(Resource):
           return get_air_quality_by_zip(zipcode)
 
 api.add_resource(GetAirQuality, '/api/quality/', methods=['GET'], strict_slashes=False)
-
-# app.run('0.0.0.0',8080)

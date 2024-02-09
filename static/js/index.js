@@ -1,9 +1,6 @@
 // prod
 const wloc = window.location;
-const baseURL = wloc.protocol + "//" + wloc.host + "/api/";
-
-// local dev
-// const baseURL = window.location + '/api/';
+const baseURL = wloc.protocol + "//" + wloc.host + "/api";
 
 const app = Vue.createApp({
   data(){
